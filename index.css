@@ -1,1 +1,306 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --color-primary: #FAECE2;
+    --color-secondary: #27AE60;
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey1: #DEDEDE;
+    --color-grey2: #b2becd;
+    --color-grey3: #808080;
+    --color-grey4: #6c7983;
+    --color-grey5: #454e56;
+    --color-grey6: #2a2e35;
+    --color-grey7: #12181b;
+
+    --box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+}
+
+body {
+    margin: 0;
+    transition: all .4 ease-in-out;
+    overflow-x: hidden;
+}
+
+
+.clickShop {
+    display: none;
+}
+
+.heading-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px;
+    background: seagreen;
+    width: 100%;
+    padding: 9px 17px;
+    box-shadow: var(--box-shadow);
+    z-index: 9999;
+}
+
+.heading-navbar h1 {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+.heading-navbar button {
+    font-size: 18px;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 12px;
+    color: white;
+    transition: transform .4s;
+}
+
+.heading-navbar button:hover {
+    transform: scale(1.1);
+}
+
+#notification-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  display: none;
+  z-index: 10000;
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.sectionLeft {
+    float: left;
+}
+
+.sectionLeft img {
+    width: 50vh;
+    height: 50vh;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: 0.4s;
+    margin: 6vh 0;
+    border: 1px solid black;
+}
+
+.sectionLeft img:hover {
+    transform: scale(1.05);
+}
+
+.sectionLeft img:active {
+    transform: scale(1.15);
+}
+
+.score-container {  
+    padding: 20px 30px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: var(--box-shadow);
+    height: 80vh;
+    border: 1px solid black;
+}
+
+.score-container p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: white;
+    text-align: center;
+    background: rgb(150,158,143);
+    background: linear-gradient(180deg, rgba(150,158,143,1) 0%, rgba(157,137,137,1) 100%);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* right section */
+.sectionRight {
+    float: right;
+}
+
+.storeTab-container {
+    background-color: #DEDEDE;
+    border-style: ridge;
+}
+
+.storeTab-container h1 {
+    font-weight: 300;
+    font-size: 34px;
+    text-align: center;
+}
+
+/* the shop tab buttons */
+.shopButton-container {
+    display: flex;
+    background-color: var(--color-secondary);
+    padding: 10px 0px;
+    justify-content: space-evenly;
+    border-style: ridge;
+}
+
+.shopButtons {
+    background-color: var(--color-grey2);
+    border: 1px solid var(--color-grey7);
+    cursor: pointer;
+    padding: 10px;
+    transition: transform .4s;
+}
+
+.shopButtons:hover, .active {
+    transform: scale(1.05);
+}
+
+.shopButtons h3 {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+.shopButtonsPassive {
+    background-color: white;
+}
+
+/* buy amount buttons */
+.buyAmount-container {
+    display: flex;
+    background-color: var(--color-primary);
+    justify-content: space-evenly;
+    gap: 4px;
+    border-style: ridge;
+    padding: 10px;
+}
+
+.buyAmountButtons {
+    background-color: var(--color-grey1);
+    border: 1px solid var(--color-grey2);
+    width: 10vh;
+    cursor: pointer;
+    transition: transform .4s
+}
+
+.buyAmountButtons h2 {
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.buyAmountButtons:hover {
+    transform: scale(1.1);
+}
+
+/* actual shop containers */
+.passiveShop-container {
+    overflow-y: scroll;
+    padding: 40px;
+    background-color: var(--color-grey3);
+    cursor: pointer;
+    border-style: ridge;
+    height: 60vh;  
+}
+
+.passiveButtons {
+    display: block;
+    padding: 20px;
+    background-color: var(--color-grey1);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 4vh;
+    width: 40vh;
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+.passiveButtons img {
+    width: 14vh;
+    height: 14vh;
+}
+
+
+
+.passiveButtons h3 {
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.passiveButtons p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.passiveButtons:hover {
+    transform: scale(1.05);
+}
+
+/* same styles as the passive shop container*/
+.clickingPowerShop-container {
+    overflow-y: scroll;
+    padding: 40px;
+    background-color: var(--color-grey3);
+    cursor: pointer;
+    border-style: ridge;
+    height: 60vh;  
+}
+
+.clickingPowerButtons {
+    display: block;
+    padding: 20px;
+    background-color: var(--color-grey1);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+.clickingPowerButtons img {
+    width: 14vh;
+    height: 14vh;
+}
+
+
+.clickingPowerButtons h3 {
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.clickingPowerButtons p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.clickingPowerButtons:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
 
